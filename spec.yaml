@@ -5,7 +5,6 @@ name: zero2prod
 # You can get region slugs from
 # https://www.digitalocean.com/docs/platform/availability-matrix/
 # They must specified lowercased.
-# `fra` stands for Frankfurt (Germany - EU)
 region: fra
 services:
   - name: zero2prod
