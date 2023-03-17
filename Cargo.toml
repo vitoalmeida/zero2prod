@@ -12,7 +12,7 @@ name = "zero2prod"
 
 [dependencies]
 actix-web = "4.3.1"
-config =  { version = "0.13", default-features = false, features = ["yaml"] }
+config =  { version = "0.10.1", default-features = false, features = ["yaml"] }
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 serde = { version = "1", features = ["derive"]}
 uuid = { version = "0.8.1", features = ["v4"] }
