@@ -5,7 +5,7 @@ name: zero2prod
 # You can get region slugs from
 # https://www.digitalocean.com/docs/platform/availability-matrix/
 # They must specified lowercased.
-region: fra
+region: bra
 services:
   - name: zero2prod
     # Relative to the repository root
