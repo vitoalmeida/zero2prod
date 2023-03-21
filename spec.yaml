@@ -14,7 +14,7 @@ services:
     github:
       # Depending on when you created the repository,
       # the default branch on GitHub might have been named `master`
-      branch: chapter-5
+      branch: chapter-7
 
       # Deploy a new version on every commit to `main`!
       # Continuous Deployment, here we come!
