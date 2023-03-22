@@ -5,7 +5,7 @@ name: zero2prod
 # You can get region slugs from
 # https://www.digitalocean.com/docs/platform/availability-matrix/
 # They must specified lowercased.
-region: bra
+region: fra
 services:
   - name: zero2prod
     # Relative to the repository root
@@ -38,6 +38,9 @@ services:
     routes:
       - path: /
     envs:
+      - key: APP_APPLICATION__BASE_URL
+        scope: RUN_TIME
+        value: ${APP_URL}
       - key: APP_DATABASE__USERNAME
         scope: RUN_TIME
         value: ${newsletter.USERNAME}
