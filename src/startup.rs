@@ -5,10 +5,14 @@ use crate::routes::{home, login_form};
 use actix_web::dev::Server;
 use actix_web::web::Data;
 use actix_web::{web, App, HttpServer};
+use secrecy::Secret;
 use sqlx::postgres::PgPoolOptions;
 use sqlx::PgPool;
 use std::net::TcpListener;
 use tracing_actix_web::TracingLogger;
+
+#[derive(Clone)]
+pub struct HmacSecret(pub Secret<String>);
 
 pub struct Application {
     port: u16,
@@ -88,7 +92,7 @@ pub fn run(
             .app_data(db_pool.clone())
             .app_data(email_client.clone())
             .app_data(base_url.clone())
-            .app_data(Data::new(hmac_secret.clone()))
+            .app_data(Data::new(HmacSecret(hmac_secret.clone())))
     })
     .listen(listener)?
     .run();
