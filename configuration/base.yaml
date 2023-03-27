@@ -9,7 +9,7 @@ database:
   database_name: "newsletter"
 email_client:
   base_url: "localhost"
-  sender_email: "test@gmail.com"
+  sender_email: "vitor@0xcarbon.org"
   authorization_token: "64a7d6e1-1f5c-4a15-bf6f-72c0d751889f"
   timeout_milliseconds: 10000
 redis_uri: "redis://127.0.0.1:6379"
